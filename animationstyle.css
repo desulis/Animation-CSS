@@ -1,0 +1,403 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: orange;
+  padding: 10rem;
+  margin: 0 75% 20% 0;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  border-radius: 25px;
+  background: #011c37;
+  color: #6300a0;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  margin: 30px;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+.btn1:hover {
+  transform: scale(1.15);
+}
+
+.form__group input {
+  border: 2px solid transparent;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+}
+.form__group input:focus {
+  border: 2px solid #6300a0;
+}
+.form__group:not(:focus):invalid {
+  background: #b20a37;
+  border: 2px solid #b20a37;
+  color: #fff;
+}
+
+.btn2 {
+  background: #011c37;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+}
+.btn2:active + .ball {
+  transform: scale(1.2);
+}
+
+.ball {
+  width: 50rem;
+  height: 50rem;
+  background: #6300a0;
+  margin-bottom: 1rem;
+  border-radius: 35rem;
+  transform: scale(0.2);
+  transition: transform 4000ms ease-in-out;
+}
+
+.btn3 {
+  background-color: rgba(1, 28, 55, 0);
+  border: 4px solid #011c37;
+  border-radius: 10rem;
+  cursor: pointer;
+  font-size: 3rem;
+  overflow: hidden;
+  padding: 1.85rem 3rem;
+  position: relative;
+  transition: transform 450ms, background-color 300ms 150ms;
+}
+.btn3:hover {
+  transform: scale(1.13);
+  background-color: #011c37;
+}
+
+.btn4 {
+  background: #011c37;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+}
+.btn4:hover + .box {
+  transform: translate(100px, 0);
+}
+
+.box {
+  width: 30rem;
+  height: 30rem;
+  background: #6300a0;
+  margin-bottom: 1rem;
+  border-radius: 35px;
+  transition: transform 330ms ease-in-out;
+}
+
+.btn5 {
+  background: #011c37;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+}
+.btn5:hover + .box2 {
+  transform: scale(1) rotate(0deg);
+}
+.btn5:hover + .box2 span {
+  transform: translateY(0);
+}
+
+.box2 {
+  width: 30rem;
+  height: 30rem;
+  background: #6300a0;
+  margin-bottom: 1rem;
+  border-radius: 35px;
+  transform: scale(0.1) rotate(-180deg);
+  transition: transform 330ms ease-in-out;
+  overflow: hidden;
+}
+.box2 span {
+  display: inline-block;
+  transform: translateY(250%);
+  transition: transform 280ms ease-out 50ms;
+  display: block;
+}
+
+.btn6 {
+  background: #b20a37;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+}
+.btn6:hover + .boxes > .boxes--rotDegrees {
+  transform: rotate(0deg);
+}
+.btn6:hover + .boxes > .boxes--rotTurns {
+  transform: rotate(0turn);
+}
+
+.boxes {
+  display: flex;
+}
+.boxes--rotDegrees {
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  background: blue;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+}
+.boxes--rotTurns {
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  background: pink;
+  transform: rotate(1turn);
+  transition: transform 500ms ease-in-out;
+}
+
+.btn7 {
+  background: #b20a37;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+}
+.btn7:active + .boxes2 > .boxes2__base--tranxScale {
+  transform: translateX(200%) scale(2);
+}
+.btn7:active + .boxes2 > .boxes2__base--scaleTranx {
+  transform: scale(2) translateX(200%);
+}
+
+.boxes2 {
+  display: flex;
+  flex-direction: column;
+}
+.boxes2__base--tranxScale {
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  background-color: #bff301;
+  transition: transform 500ms ease-in-out;
+}
+.boxes2__base--scaleTranx {
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  background-color: pink;
+  transition: transform 500ms ease-in-out;
+}
+
+.btn8 {
+  background: #b20a37;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+}
+.btn8:active + .boxes3 {
+  transition: transform 280ms ease-out 50ms;
+}
+
+.boxes3 {
+  display: flex;
+  flex-direction: column;
+}
+.boxes3__perspective75px {
+  color: darkgray;
+  border: black 2px;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  transform: perspective(75px) rotateX(45deg);
+}
+.boxes3__perspective150px {
+  color: yellow;
+  border: black 2px;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  transform: perspective(150px) rotateX(45deg);
+}
+.boxes3__perspective300px {
+  color: black;
+  border: black 2px;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  transform: perspective(300px) rotateX(45deg);
+}
+
+.btn9 {
+  background-color: pink;
+  border: 4px solid black;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+}
+.btn9:active + .progress > .progress__bar {
+  transform: scaleX(1);
+}
+
+.progress {
+  width: 1000px;
+  height: 100px;
+  margin: 20px;
+  border: solid 5px black;
+}
+.progress__bar {
+  width: 1000px;
+  height: 100px;
+  background: turquoise;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transform-origin: left;
+}
+
+.button3d {
+  margin: 300px auto;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.button3d .btn3d {
+  color: white;
+  font-size: 3.5rem;
+  cursor: pointer;
+  position: relative;
+  width: 25vw;
+  height: 7.5vw;
+  perspective: 500px;
+}
+.button3d .btn3d:active > .btn__flip {
+  transform: rotateX(-90deg);
+}
+.button3d .btn3d .btn__flip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform-origin: center bottom 3.75vw;
+  transition: transform 500ms cubic-bezier(0.7, 0.01, 0.23, 0.99);
+  transform: rotateX(0deg);
+}
+.button3d .btn3d .btn__flip--off {
+  transform: rotateX(0deg) translateZ(3.75vw);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EE6352;
+}
+.button3d .btn3d .btn__flip--on {
+  transform: rotateX(90deg) translateZ(3.75vw);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #59CD90;
+}
+
+.lightsaber .hilt {
+  cursor: pointer;
+  width: 15px;
+  height: 50px;
+  border-bottom: solid 4px grey;
+  border-top: solid 5px grey;
+  border-radius: 5px;
+  z-index: 1;
+  background: #e2e2e2;
+  background: linear-gradient(to right, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+}
+.lightsaber .hilt > .switch {
+  background: #b94a37;
+  width: 3px;
+  height: 10px;
+  position: absolute;
+  bottom: 25px;
+  left: 13px;
+  border-radius: 10px;
+}
+.lightsaber .hilt:active + .plasma {
+  transform: scale(1, 1);
+}
+.lightsaber .hilt:active > .switch {
+  transform: scale(0.7, 1);
+}
+
+.lightsaber .plasma {
+  transition: transform 300ms;
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  bottom: 45px;
+  left: 2px;
+  width: 10px;
+  display: block;
+  transform: scale(1, 0);
+  height: 250px;
+  transform-origin: bottom center;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.vader {
+  background: linear-gradient(to right, #e51115 0%, #fefefe 30%, #fefefe 47%, #fefefe 71%, #e51115 100%);
+  box-shadow: 0 0 10px #e51115;
+}
+
+body {
+  background: #333;
+}
+
+.lightsaber-example {
+  display: flex;
+  justify-content: center;
+  padding-top: 325px;
+}
+
+.lightsaber {
+  position: relative;
+}
+
+/*# sourceMappingURL=animationstyle.css.map */

@@ -1,0 +1,12 @@
+{
+  "name": "AnimationCSS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./practiceanimation.scss:./animationstyle.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
